@@ -1,0 +1,58 @@
+<nav class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/50 -mx-6 px-6">
+  <div class="flex items-center justify-between h-16">
+    <a href="#" class="text-white font-bold text-lg tracking-tight">
+      Javier <span class="text-slate-500">Bahena</span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center gap-1">
+      <a href="#proyectos" class="px-3 py-2 text-sm text-slate-400 hover:text-white transition-colors rounded-md">Proyectos</a>
+      <a href="#tecnologias" class="px-3 py-2 text-sm text-slate-400 hover:text-white transition-colors rounded-md">Tecnologías</a>
+      <a href="#cv" class="px-3 py-2 text-sm text-slate-400 hover:text-white transition-colors rounded-md">CV</a>
+      <a href="#contacto" class="px-3 py-2 text-sm text-slate-400 hover:text-white transition-colors rounded-md">Contacto</a>
+    </div>
+
+    <!-- Hamburger button -->
+    <button
+      id="menu-toggle"
+      class="md:hidden text-slate-400 hover:text-white transition-colors p-1"
+      aria-label="Abrir menú"
+    >
+      <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800/50 pb-4 pt-2">
+    <a href="#proyectos" class="block px-2 py-3 text-sm text-slate-400 hover:text-white transition-colors rounded-md mobile-link">Proyectos</a>
+    <a href="#tecnologias" class="block px-2 py-3 text-sm text-slate-400 hover:text-white transition-colors rounded-md mobile-link">Tecnologías</a>
+    <a href="#cv" class="block px-2 py-3 text-sm text-slate-400 hover:text-white transition-colors rounded-md mobile-link">CV</a>
+    <a href="#contacto" class="block px-2 py-3 text-sm text-slate-400 hover:text-white transition-colors rounded-md mobile-link">Contacto</a>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+  const links = menu?.querySelectorAll('.mobile-link');
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const isOpen = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      iconOpen?.classList.toggle('hidden');
+      iconClose?.classList.toggle('hidden');
+    });
+
+    links?.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        iconOpen?.classList.remove('hidden');
+        iconClose?.classList.add('hidden');
+      });
+    });
+  }
+</script>

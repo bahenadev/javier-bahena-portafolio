@@ -3,18 +3,34 @@ import '../styles/global.css';
 
 interface Props {
 	title: string;
+	description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description = 'Javier Bahena - Full Stack Developer & Business Engineer' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang="es" class="scroll-smooth scroll-pt-20">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Javier Bahena - Full Stack Developer & Business Engineer" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="canonical" content={Astro.url} />
+
+		<!-- Open Graph -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Javier Bahena Ocampo" />
+		<meta property="og:locale" content="es_MX" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+
 		<title>{title}</title>
 	</head>
 	<body class="bg-slate-950 text-slate-300 font-sans antialiased selection:bg-indigo-500 selection:text-white">

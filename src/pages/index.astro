@@ -1,14 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
+import Tech from '../components/Tech.astro';
+import CV from '../components/CV.astro';
 import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Javier Bahena | Desarrollador Java Full Stack">
+<Layout title="Javier Bahena Ocampo | Desarrollador Java Full Stack">
     <main class="max-w-5xl mx-auto px-6">
+        <Nav />
         <Hero />
         <Projects />
+        <Tech />
+        <CV />
+        <Contact />
         <Footer />
     </main>
 </Layout>

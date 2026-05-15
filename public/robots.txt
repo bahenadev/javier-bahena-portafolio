@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://javierbahena.com/sitemap-index.xml

@@ -1,0 +1,228 @@
+---
+const experience = [
+    {
+    role: "Desarrollador Full Stack",
+    company: "Listo Broker (emprendimiento propio - desarrollo activo)",
+    period: "enero 2026 - mayo 2026",
+    achievements: [
+      "Desarrollé plataforma SaaS inmobiliaria desde cero con Next.js, NestJS y Supabase, desplegada en AWS.",
+"Implementé arquitectura multi-tenant con roles diferenciados (administrador y agente) por cuenta de cliente.",
+"Desarrollé módulo de gestión de propiedades con formularios de carga, visualización de inventario y panel administrativo.",
+"Construí sistema de despliegue de micrositios por cliente con subdominio personalizado y selección entre tres plantillas.",
+"Apliqué flujo de desarrollo asistido por agentes de IA para acelerar diseño, arquitectura y entrega de funcionalidades.",
+    ],
+  },
+  {
+    role: "Director de Marketing y Tecnología",
+    company: "Inmolegia inmobiliaria (emprendimiento propio)",
+    period: "enero 2020 - diciembre 2025",
+    achievements: [
+      "Desarrollé plataforma web inmobiliaria (WordPress, Elementor, Houzez) con buscador por filtros, listados geolocalizados, mapa interactivo y dashboard administrativo.",
+      "Integré APIs de Google Maps, Analytics y Search Console para geolocalización, tráfico y posicionamiento.",
+      "Desarrollé agente conversacional en WhatsApp con API de OpenAI para atención automatizada de prospectos.",
+      "Implementé automatizaciones con n8n conectando formularios, CRM y notificaciones.",
+      "Gestioné SEO técnico y local posicionando la marca en Google Maps y búsqueda orgánica.",
+      "Lideré equipo de asesores comerciales coordinando objetivos y métricas de cierre.",
+      "Construí audiencia de 7,000+ seguidores para la marca Inmolegia aplicando estrategia de contenido digital en redes sociales.",
+    ],
+  },
+  {
+    role: "Practicante de Marketing Digital",
+    company: "Regnum Inmobiliaria",
+    period: "diciembre 2018 - diciembre 2019",
+    achievements: [
+      "Analicé datos de Google Keyword Planner para identificar oportunidades de posicionamiento orgánico y atraer tráfico al sitio web.",
+      "Gestioné campañas de marketing digital en portales especializados y redes sociales para aumentar la visibilidad de las propiedades inmobiliarias.",
+    ],
+  },
+];
+
+const education = [
+  {
+    degree: "Bootcamp Desarrollador Java Full Stack Jr.",
+    institution: "Generation México",
+    period: "marzo 2026 - junio 2026",
+  },
+  {
+    degree: "Ingeniería en Negocios y Gestión Empresarial (Titulado)",
+    institution: "Universidad Tecnológica del Valle de Toluca",
+    period: "septiembre 2015 - abril 2019",
+  },
+  {
+    degree: "TSU en Desarrollo de Negocios Área Mercadotecnia (Titulado)",
+    institution: "Universidad Tecnológica del Valle de Toluca",
+    period: "septiembre 2015 - agosto 2017",
+  },
+  {
+    degree: "Técnico en Soporte y Mantenimiento de Equipo de Cómputo",
+    institution: "Centro de Bachillerato Tecnológico Agropecuario 223",
+    period: "agosto 2012 - junio 2015",
+  },
+];
+
+const courses = [
+  { name: "AWS Certified Solutions Architect Associate", platform: "Udemy", year: "2026" },
+  { name: "Universidad Java - Cero a Experto (+155 hrs)", platform: "Udemy", year: "2026" },
+  { name: "React y TypeScript - La Guía Completa (+10 Proyectos)", platform: "Udemy", year: "2026" },
+];
+---
+
+<section id="cv" class="py-16 md:py-24 border-t border-slate-800/50">
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-white">Currículum Vitae</h2>
+    <a
+      href="/cv-javier-bahena.pdf"
+      download
+      class="bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-indigo-500/50 text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors flex items-center gap-2 w-fit"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+      Descargar CV
+    </a>
+  </div>
+
+  <!-- Perfil Profesional -->
+  <div class="mb-14">
+    <h3 class="text-lg font-semibold text-indigo-400 uppercase tracking-wider mb-4">Perfil Profesional</h3>
+    <p class="text-slate-300 text-base leading-relaxed max-w-3xl">
+      Desarrollador Java Full Stack con 5+ años resolviendo problemas de negocio en entornos digitales. Formación activa en Java 17, Spring Boot 3, React y arquitecturas REST. Trabajo bajo metodologías ágiles (Scrum/Jira) con desarrollo asistido por IA. Listo para contribuir desde el primer día en la integración de APIs, automatización de procesos y desarrollo de soluciones de negocio completas.
+    </p>
+  </div>
+
+  <!-- Habilidades Blandas -->
+  <div class="mb-14">
+    <h3 class="text-lg font-semibold text-indigo-400 uppercase tracking-wider mb-6">Habilidades Blandas</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+      <div class="bg-slate-900/40 border border-emerald-500/20 rounded-xl p-5 hover:bg-slate-800/40 transition-colors duration-300">
+        <div class="mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-400"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 bg-emerald-500/5 border border-emerald-500/20 rounded-full text-xs text-emerald-400 font-medium">Autoaprendizaje</span>
+          <span class="px-2.5 py-1 bg-emerald-500/5 border border-emerald-500/20 rounded-full text-xs text-emerald-400 font-medium">Autonomía</span>
+          <span class="px-2.5 py-1 bg-emerald-500/5 border border-emerald-500/20 rounded-full text-xs text-emerald-400 font-medium">Enfoque sostenido</span>
+          <span class="px-2.5 py-1 bg-emerald-500/5 border border-emerald-500/20 rounded-full text-xs text-emerald-400 font-medium">Orientación al detalle</span>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/40 border border-sky-500/20 rounded-xl p-5 hover:bg-slate-800/40 transition-colors duration-300">
+        <div class="mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 bg-sky-500/5 border border-sky-500/20 rounded-full text-xs text-sky-400 font-medium">Liderazgo de equipos</span>
+          <span class="px-2.5 py-1 bg-sky-500/5 border border-sky-500/20 rounded-full text-xs text-sky-400 font-medium">Colaboración activa</span>
+          <span class="px-2.5 py-1 bg-sky-500/5 border border-sky-500/20 rounded-full text-xs text-sky-400 font-medium">Comunicación efectiva</span>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/40 border border-amber-500/20 rounded-xl p-5 hover:bg-slate-800/40 transition-colors duration-300">
+        <div class="mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 bg-amber-500/5 border border-amber-500/20 rounded-full text-xs text-amber-400 font-medium">Resolución de problemas</span>
+          <span class="px-2.5 py-1 bg-amber-500/5 border border-amber-500/20 rounded-full text-xs text-amber-400 font-medium">Pensamiento analítico</span>
+          <span class="px-2.5 py-1 bg-amber-500/5 border border-amber-500/20 rounded-full text-xs text-amber-400 font-medium">Orientación a resultados</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Experiencia Laboral -->
+  <div class="mb-14">
+    <h3 class="text-lg font-semibold text-indigo-400 uppercase tracking-wider mb-6">Experiencia Laboral</h3>
+    <div class="space-y-8">
+      {experience.map(job => (
+        <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-6">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-1 mb-4">
+            <div>
+              <h4 class="text-white font-bold text-lg">{job.role}</h4>
+              <p class="text-indigo-400 text-sm">{job.company}</p>
+            </div>
+            <span class="text-slate-500 text-sm flex-shrink-0">{job.period}</span>
+          </div>
+          <ul class="space-y-2">
+            {job.achievements.map(achievement => (
+              <li class="flex items-start gap-3 text-slate-300 text-sm leading-relaxed">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-500/70 flex-shrink-0"></span>
+                {achievement}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Proyecto Académico -->
+  <div class="mb-14">
+    <h3 class="text-lg font-semibold text-indigo-400 uppercase tracking-wider mb-4">Proyecto Académico</h3>
+    <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-6">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-1 mb-6">
+        <div>
+          <h4 class="text-white font-bold text-lg">MuebleArte: E-commerce Fullstack</h4>
+          <p class="text-indigo-400 text-sm">Desarrollador Java Full Stack Jr.</p>
+        </div>
+        <span class="text-slate-500 text-sm flex-shrink-0">marzo 2026 - junio 2026</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="flex items-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400 flex-shrink-0 mt-0.5"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          <p class="text-slate-400 text-sm leading-relaxed">Arquitectura API REST con Java 17 y Spring Boot 3; implementación de la base de datos en MySQL.</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400 flex-shrink-0 mt-0.5"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+          <p class="text-slate-400 text-sm leading-relaxed">Interfaz responsiva con HTML5, CSS3/Bootstrap y JavaScript; diseño mobile-first.</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400 flex-shrink-0 mt-0.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          <p class="text-slate-400 text-sm leading-relaxed">Gestión ágil con Scrum y Jira: planificación de sprints, seguimiento del backlog y participación en reuniones del equipo.</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400 flex-shrink-0 mt-0.5"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+          <p class="text-slate-400 text-sm leading-relaxed">Uso colaborativo de Git/GitHub, manejo de ramas y pull requests.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Formación Educativa -->
+  <div class="mb-14">
+    <h3 class="text-lg font-semibold text-indigo-400 uppercase tracking-wider mb-4">Formación Educativa</h3>
+    <div class="space-y-4">
+      {education.map(edu => (
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-1 bg-slate-900/40 border border-slate-800 rounded-lg px-5 py-4">
+          <div>
+            <p class="text-white font-medium">{edu.degree}</p>
+            <p class="text-slate-400 text-sm">{edu.institution}</p>
+          </div>
+          <span class="text-slate-500 text-sm">{edu.period}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Cursos -->
+  <div class="mb-14">
+    <h3 class="text-lg font-semibold text-indigo-400 uppercase tracking-wider mb-4">Cursos</h3>
+    <div class="space-y-3">
+      {courses.map(course => (
+        <div class="flex items-center gap-4 bg-slate-900/40 border border-slate-800 rounded-lg px-5 py-3">
+          <span class="w-2 h-2 rounded-full bg-indigo-500/70 flex-shrink-0"></span>
+          <span class="text-slate-300 text-sm">{course.name}</span>
+          <span class="text-slate-600 text-xs ml-auto">{course.platform} — {course.year}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Idiomas -->
+  <div>
+    <h3 class="text-lg font-semibold text-indigo-400 uppercase tracking-wider mb-4">Idiomas</h3>
+    <div class="bg-slate-900/40 border border-slate-800 rounded-lg px-5 py-4 inline-block">
+      <p class="text-white font-medium">Inglés <span class="text-slate-400 font-normal">— A2</span></p>
+    </div>
+  </div>
+</section>

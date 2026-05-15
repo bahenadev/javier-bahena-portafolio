@@ -1,32 +1,41 @@
 ---
 const projects = [
     {
+        title: "MuebleArte",
+        description: "E-commerce especializado en el sector de mobiliario. Implementa un flujo completo de compra, desde la navegación por catálogo hasta la gestión de inventarios y pedidos en backend.",
+        tech: ["Java", "Spring Boot", "MySQL", "Javascript", "Bootstrap", "HTML5/CSS"],
+        link: "https://muebleartemuebleria.netlify.app/",
+        icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>',
+        color: "text-amber-400 bg-amber-500/10 border-amber-500/20"
+    },
+    {
         title: "Listo Broker",
-        description: "SaaS CRM inmobiliario con arquitectura Multi-tenant (multi-inquilino). Diseñado para escalar operaciones de múltiples agencias, centralizando la gestión de inventario y prospectos en una plataforma unificada.",
-        tech: ["Next.js", "NestJS", "Supabase", "TypeScript"],
-        link: "https://listobroker.com" 
+        description: "SaaS CRM inmobiliario desarrollado desde cero con arquitectura multi-tenant. Incluye roles diferenciados (admin/agente), gestión de propiedades, despliegue de micrositios con subdominio personalizado y plantillas seleccionables.",
+        tech: ["Next.js (React)", "NestJS", "Supabase (PostgreSQL)", "TypeScript", "AWS"],
+        link: "https://listobroker.com/",
+        icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>',
+        color: "text-indigo-400 bg-indigo-500/10 border-indigo-500/20"
     },
     {
         title: "Inmolegia",
-        description: "Plataforma para la administración integral de activos inmobiliarios. Facilita el control operativo y comercial de la agencia, optimizando los tiempos de respuesta y recuperación de propiedades.",
-        tech: ["PHP", "JavaScript", "CSS/HTML", "SaaS Architecture"],
-        link: "https://inmolegia.com/" 
+        description: "Plataforma web inmobiliaria con dashboard administrativo para la gestión integral de propiedades, prospectos y operaciones comerciales de la agencia.",
+        tech: ["Next.js (React)", "NestJS", "Supabase (PostgreSQL)", "TypeScript", "AWS"],
+        link: "http://inmolegia.com/",
+        icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+        color: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20"
     },
-    {
-        title: "MuebleArte",
-        description: "E-commerce especializado en el sector de mobiliario. Implementa un flujo completo de compra, desde la navegación por catálogo hasta la gestión de inventarios y pedidos en backend.",
-        tech: ["Java", "Spring Boot", "MySQL", "Bootstrap", "JS"],
-        link: "#"
-    }
 ];
 ---
 
-<section class="py-16 md:py-24">
-    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Experiencia & Proyectos</h2>
+<section id="proyectos" class="py-16 md:py-24">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Proyectos</h2>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map(project => (
             <a class="group bg-slate-900/40 border border-slate-800 rounded-2xl p-6 hover:bg-slate-800/40 hover:border-indigo-500/50 transition-all duration-300 flex flex-col h-full" href={project.link} target="_blank">
+                <div class={`w-12 h-12 rounded-xl border flex items-center justify-center mb-4 ${project.color}`}>
+                    <Fragment set:html={project.icon} />
+                </div>
                 <h3 class="text-xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
                     {project.title}
                 </h3>

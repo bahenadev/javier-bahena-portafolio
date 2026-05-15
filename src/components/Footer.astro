@@ -7,9 +7,10 @@ const year = new Date().getFullYear();
     
     <div class="flex gap-6 font-medium">
         <a href="https://linkedin.com/in/bahenadev" target="_blank" class="hover:text-indigo-400 transition-colors">LinkedIn</a>
-        <a href="https://tiktok.com/@bahenadev" target="_blank" class="hover:text-indigo-400 transition-colors">TikTok</a>
+        
         <a href="https://github.com/bahenadev" target="_blank" class="hover:text-indigo-400 transition-colors">GitHub</a>
-<button 
+<!-- Desktop: copy to clipboard -->
+        <button 
             onclick="
                 navigator.clipboard.writeText('javierbahenadev@gmail.com');
                 const btn = this;
@@ -26,11 +27,17 @@ const year = new Date().getFullYear();
                     btn.classList.remove('text-indigo-400');
                 }, 2000);
             "
-            class="flex items-center gap-2 hover:text-indigo-400 transition-colors cursor-pointer outline-none group"
+            class="hidden md:flex items-center gap-2 hover:text-indigo-400 transition-colors cursor-pointer outline-none group"
         >
             <span>javierbahenadev@gmail.com</span>
             <svg class="copy-icon w-4 h-4 text-slate-600 group-hover:text-indigo-400 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
             <svg class="check-icon w-4 h-4 text-green-400 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
         </button>
+
+        <!-- Mobile: mailto -->
+        <a href="mailto:javierbahenadev@gmail.com" class="md:hidden flex items-center gap-2 hover:text-indigo-400 transition-colors">
+            <span>javierbahenadev@gmail.com</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
     </div>
 </footer>

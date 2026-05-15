@@ -1,46 +1,54 @@
-# Astro Starter Kit: Basics
+# Javier Bahena Ocampo — Portafolio
+
+Portafolio personal como Desarrollador Java Full Stack. Construido con Astro y Tailwind CSS.
+
+## Stack
+
+- [Astro 6](https://astro.build) — Framework web estático
+- [Tailwind CSS v4](https://tailwindcss.com) — Estilos utilitarios
+- [pnpm](https://pnpm.io) — Gestor de paquetes
+
+## Desarrollo
 
 ```sh
-npm create astro@latest -- --template basics
+pnpm install        # Instalar dependencias
+pnpm dev            # Servidor local en localhost:4321
+pnpm build          # Generar sitio estático en dist/
+pnpm preview        # Previsualizar build de producción
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Estructura
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+```
+src/
+├── components/     # Componentes reutilizables
+│   ├── Hero.astro
+│   ├── Tech.astro
+│   ├── Projects.astro
+│   ├── CV.astro
+│   ├── Contact.astro
+│   ├── Nav.astro
+│   └── Footer.astro
+├── layouts/        # Layout base con SEO
+│   └── Layout.astro
+├── pages/          # Rutas del sitio
+│   ├── index.astro
+│   └── 404.astro
+└── styles/         # Estilos globales
+    └── global.css
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Deploy
 
-## 🧞 Commands
+El sitio se despliega en Netlify con deploy manual de la carpeta `dist/`. Incluye `netlify.toml` con configuración de Forms para el formulario de contacto.
 
-All commands are run from the root of the project, from a terminal:
+```sh
+pnpm build          # Genera dist/
+# Subir carpeta dist/ a Netlify (sin comprimir)
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Contacto
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Email: javierbahenadev@gmail.com
+- LinkedIn: [linkedin.com/in/bahenadev](https://linkedin.com/in/bahenadev)
+- GitHub: [github.com/bahenadev](https://github.com/bahenadev)
