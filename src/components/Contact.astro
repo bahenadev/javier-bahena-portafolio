@@ -80,6 +80,7 @@
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
+      action="/?enviado=ok#contacto"
       class="space-y-4"
     >
       <input type="hidden" name="form-name" value="contacto" />
@@ -126,36 +127,14 @@
 </section>
 
 <script>
-  document.querySelector('form[name="contacto"]')?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const msg = form.querySelector('.form-msg');
-    const btn = form.querySelector('button');
-
-    btn.disabled = true;
-    btn.innerHTML = 'Enviando...';
-    msg.classList.add('hidden');
-
-    try {
-      const res = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(form)).toString(),
-      });
-      if (res.ok) {
-        msg.textContent = '¡Mensaje enviado! Te responderé pronto.';
-        msg.classList.remove('hidden', 'text-red-400');
-        msg.classList.add('text-green-400');
-        form.reset();
-      } else {
-        throw new Error();
-      }
-    } catch {
-      msg.textContent = 'Error al enviar. Intenta a mi email directo.';
-      msg.classList.remove('hidden', 'text-green-400');
-      msg.classList.add('text-red-400');
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('enviado') === 'ok') {
+    const msg = document.querySelector('.form-msg');
+    if (msg) {
+      msg.textContent = '¡Mensaje enviado! Te responderé pronto.';
+      msg.classList.remove('hidden');
+      msg.classList.add('text-green-400');
     }
-    btn.disabled = false;
-    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Enviar mensaje';
-  });
+    history.replaceState(null, '', window.location.pathname + '#contacto');
+  }
 </script>
