@@ -78,9 +78,9 @@
     <form
       name="contacto"
       method="POST"
-      data-netlify="true"
+      netlify
       netlify-honeypot="bot-field"
-      action="/?enviado=ok#contacto"
+      action="/gracias/"
       class="space-y-4"
     >
       <input type="hidden" name="form-name" value="contacto" />
@@ -126,15 +126,3 @@
   </div>
 </section>
 
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('enviado') === 'ok') {
-    const msg = document.querySelector('.form-msg');
-    if (msg) {
-      msg.textContent = '¡Mensaje enviado! Te responderé pronto.';
-      msg.classList.remove('hidden');
-      msg.classList.add('text-green-400');
-    }
-    history.replaceState(null, '', window.location.pathname + '#contacto');
-  }
-</script>
